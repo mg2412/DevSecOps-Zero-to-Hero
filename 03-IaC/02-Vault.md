@@ -75,10 +75,11 @@ EOF
 ---
 
 ## Step 5: GitHub Actions OIDC trust
-
+export VAULT_ADDR="http://127.0.0.1:8200"
 ```bash
 # Enable JWT Auth
 vault auth enable jwt
+
 
 # Configure OIDC connection
 vault write auth/jwt/config \
